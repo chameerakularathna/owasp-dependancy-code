@@ -1,5 +1,6 @@
- stage('OWASP Dependacy Scan') {
+stage('OWASP Dependacy Scan') {
             steps {
-                dependancyCheck additionalArguments: '', odcInstallation: 'DP-check'
+                dependancyCheck additionalArguments: ' --scan ./', odcInstallation: 'DP'
                 dependancyCheck publisher pattern: '**/dependancy-check-report.xml'
             }
+        }
